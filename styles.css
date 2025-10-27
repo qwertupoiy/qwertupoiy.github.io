@@ -37,7 +37,7 @@ a:hover {
   padding: 2rem 1.25rem 6rem;
 }
 
-/* 헤더/히어로 */
+/* HERO */
 header.hero {
   display: grid;
   gap: 1rem;
@@ -87,14 +87,14 @@ header.hero .contact code {
   color: var(--ink);
 }
 
-/* 구분선 */
+/* divider */
 .section-divider {
   height:1px;
   background: rgba(0,0,0,0.06);
   margin: 0 0 2rem 0;
 }
 
-/* 섹션 공통 */
+/* 공통 섹션 카드 */
 section.block {
   background-color: var(--panel);
   border: 1px solid var(--line);
@@ -136,11 +136,11 @@ section.block p {
   display: grid;
   gap: 1rem 1rem;
   margin-top: 1rem;
-  grid-template-columns: 1fr; /* 기본: 모바일은 1열 */
+  grid-template-columns: 1fr; /* 모바일은 1열 */
 }
 @media (min-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(5, 1fr); /* 데스크탑: 5개 고정 */
+    grid-template-columns: repeat(5, 1fr); /* 데스크탑: 5칸 고정 */
   }
 }
 
@@ -172,7 +172,7 @@ section.block p {
   white-space: pre-line;
 }
 
-/* 프로젝트 카드 */
+/* 프로젝트 전체 레이아웃 */
 .proj {
   display: grid;
   gap: 1rem 1.5rem;
@@ -188,7 +188,7 @@ section.block p {
 }
 @media(min-width:768px){
   .proj {
-    grid-template-columns: minmax(0,1fr) 320px;
+    grid-template-columns: minmax(0,1fr) 360px;
   }
 }
 
@@ -240,7 +240,7 @@ section.block p {
   margin-bottom: .4rem;
 }
 
-/* 강조 박스 (개인화 추천 기능) */
+/* 강조 박스 */
 .highlight-box {
   border:1px solid rgba(37,99,235,0.2);
   background:rgba(37,99,235,0.05);
@@ -257,6 +257,7 @@ section.block p {
   font-size:.8rem;
 }
 
+/* 프로젝트 사이드(이미지) */
 .proj-side {
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) - 0px);
@@ -266,23 +267,33 @@ section.block p {
   color: var(--muted);
   line-height: 1.5;
   box-shadow: 0 16px 24px rgba(15,23,42,.06);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
+
+/* 여기 수정: 세로로 길게 보여주기 위한 스타일 */
 .proj-side img {
   width: 100%;
-  max-height: 180px;
-  object-fit: cover;
+  height: auto;
+  max-height: 480px;           /* 훨씬 크게 */
+  object-fit: contain;         /* 안 잘리게 전체 보여줌 */
+  background-color: #000;      /* 남는 부분은 검정으로 */
   border-radius: .5rem;
   border: 1px solid var(--line);
-  background: #fff;
   display: block;
-  margin-bottom: .5rem;
-  cursor: pointer; /* 확대 가능 표시 */
+  margin-bottom: .75rem;
+  cursor: pointer;
 }
+
 .proj-side .caption {
-  font-size: .7rem;
+  font-size: .75rem;
   color: var(--muted);
   line-height: 1.4;
+  margin: 0 0 .25rem 0;
 }
+
 .proj-side a {
   word-break: break-all;
   font-size: .7rem;
@@ -309,7 +320,7 @@ footer {
   color: var(--muted);
 }
 
-/* 모달 스타일 */
+/* 모달 */
 .modal-backdrop {
   position: fixed;
   inset: 0;
