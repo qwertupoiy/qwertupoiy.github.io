@@ -1,12 +1,114 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YooDohyun Portfolio</title>
-  <link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-<body>
+<section class="proj-wrapper proj-summarix">
+  <!-- 1. Hero -->
+  <section class="card proj-hero">
+    <div>
+      <h1>Summarix</h1>
+      <p class="proj-sub">AI로 경제 뉴스를 수집·요약하고 대시보드로 보여주는 분석 웹서비스</p>
+      <p class="proj-meta">2025.09 ~ 2025.10 · Spring Boot + FastAPI · 팀 프로젝트</p>
+    </div>
+    <div class="proj-hero-actions">
+      <a class="btn-secondary" href="index.html" data-page="index.html">← 메인으로</a>
+      <a class="btn-primary" href="https://github.com/qwertupoiy/summarix" target="_blank">GitHub 보기</a>
+      <a class="btn-demo" href="https://drive.google.com/file/d/10l2G4HUBxfuKQ8xT1BKUAJbg4XiFUsp_/view?usp=drive_link" target="_blank">시연 영상</a>
+      <a class="btn-ppt" href="../../assets/docs/SUMMARIX_PDF.pdf" download>발표자료</a>
+    </div>
+  </section>
 
-</body>
-</html>
+  <!-- 2. 개요 -->
+  <section class="card proj-section">
+    <h2>프로젝트 개요</h2>
+    <p>
+      경제 뉴스를 자동으로 수집해 요약하고, 감성/핫토픽을 분석해 한 화면에 보여주는 서비스입니다. <br>
+      분석 파트(FastAPI)와 서비스 파트(Spring Boot)를 분리해 <b>ML 파이프라인을 바꿔도 서비스는 안정적으로 유지</b>되도록 설계했습니다. <br>
+      MongoDB로 사용자 관심사를 저장해 개인화 추천도 제공합니다.
+    </p>
+  </section>
+
+  <!-- 3. 주요 기능 -->
+  <section class="card proj-section">
+    <h2>주요 기능</h2>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <h3>뉴스 수집</h3>
+        <p>경제 카테고리 기사 주기적 수집</p>
+      </div>
+      <div class="arch-card">
+        <h3>요약/감성</h3>
+        <p>FastAPI에 요청해 요약/감성/키워드 뽑기</p>
+      </div>
+      <div class="arch-card">
+        <h3>대시보드</h3>
+        <p>실시간 키워드, 감성 추이, 유튜브 댓글 분석 결과 노출</p>
+      </div>
+      <div class="arch-card">
+        <h3>개인화 추천</h3>
+        <p>MongoDB에 저장된 관심사 기반 도서/영상 추천</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 화면 -->
+  <section class="card proj-section">
+    <h2>주요 화면</h2>
+    <div class="screen-grid">
+      <figure class="screen-box is-image">
+        <img
+          src="https://github.com/user-attachments/assets/ad418c9c-9bb6-4164-97e3-4563572a9b72"
+          alt="Summarix 대시보드 화면"
+          class="preview-img"
+          data-caption="대시보드: 실시간 경제 키워드, 감성 추이, 유튜브 의견 분석 결과를 한 화면에 표시"
+        />
+        <figcaption class="caption">대시보드 메인</figcaption>
+      </figure>
+      <figure class="screen-box is-image">
+        <img
+          src="../../assets/docs/Summarix_news.png"
+          alt="뉴스 요약"
+          class="preview-img"
+          data-caption="뉴스 요약"
+        />
+        <figcaption class="caption">뉴스 요약</figcaption>
+      </figure>
+      <figure class="screen-box is-image">
+        <img
+          src="../../assets/docs/Summarix_recommend.png"
+          alt="개인화 추천"
+          class="preview-img"
+          data-caption="개인화 추천"
+        />
+        <figcaption class="caption">개인화 추천</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. 스택 -->
+  <section class="proj-columns">
+    <div class="card proj-info">
+      <h2>기술 스택</h2>
+      <ul>
+        <li><strong>Service</strong> : Spring Boot</li>
+        <li><strong>Analysis</strong> : FastAPI (Python)</li>
+        <li><strong>DB</strong> : MongoDB Atlas</li>
+        <li><strong>Data</strong> : Pandas, Transformers</li>
+        <li><strong>Auth</strong> : 세션/쿠키 기반 로그인</li>
+      </ul>
+    </div>
+    <div class="card proj-stack">
+      <h2>특징</h2>
+      <div class="stack-badges">
+        <span class="stack">수집 → 분석 → 시각화</span>
+        <span class="stack">Spring ↔ FastAPI 연동</span>
+        <span class="stack">개인화 추천</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 모달 -->
+  <div class="modal-backdrop" id="sxModalBackdrop" style="display:none;">
+    <div class="modal-content">
+      <button class="modal-close" id="sxModalClose">닫기</button>
+      <img id="sxModalImg" src="" alt="screenshot preview" />
+      <div class="modal-caption" id="sxModalCaption"></div>
+    </div>
+  </div>
+</section>

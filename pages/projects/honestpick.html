@@ -1,12 +1,136 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YooDohyun Portfolio</title>
-  <link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-<body>
-ㅇㅇㅇㅇ
-</body>
-</html>
+<section class="proj-wrapper proj-honestpick">
+  <!-- 1. Hero -->
+  <section class="card proj-hero">
+    <div>
+      <h1>HonestPick</h1>
+      <p class="proj-sub">예약/방문한 사용자만 리뷰를 남길 수 있는 음식점 리뷰 · 예약 웹서비스</p>
+      <p class="proj-meta">2025.05 ~ 2025.06 · JSP / Servlet · 팀 프로젝트</p>
+    </div>
+    <div class="proj-hero-actions">
+      <a class="btn-secondary" href="index.html" data-page="index.html">← 메인으로</a>
+      <a class="btn-primary" href="https://github.com/qwertupoiy/HonestPick" target="_blank">GitHub 보기</a>
+      <a class="btn-demo" href="https://drive.google.com/file/d/1bDkzHl1yo9qC2cL4pnf8bBQMRf2Ma54k/view?usp=sharing" target="_blank">시연 영상</a>
+      <a class="btn-ppt" href="../../assets/docs/HonestPick_PDF.pdf" download>발표자료</a>
+    </div>
+  </section>
+
+  <!-- 2. 개요 -->
+  <section class="card proj-section">
+    <h2>프로젝트 개요</h2>
+    <p>
+      리뷰 서비스의 가장 큰 문제는 “안 가본 사람이 남기는 리뷰”였습니다. <br>
+      HonestPick은 <b>예약 또는 방문 이력이 있는 사용자에게만</b> 리뷰 권한을 주는 방식으로 리뷰의 신뢰도를 높였습니다. <br>
+      추가로 점주가 멤버십을 결제하면 매장이 우선 노출되도록 해 <b>사용자-점주-관리자</b> 모두에게 이득이 되는 구조를 목표로 했습니다.
+    </p>
+    <ul class="bullet">
+      <li>예약 → 방문처리 → 리뷰작성 으로 이어지는 플로우</li>
+      <li>리뷰 1건에 최대 5개 이미지 첨부 (JSP MultipartRequest)</li>
+      <li>관리자 페이지에서 매장 등록/비공개, 리뷰 관리</li>
+    </ul>
+  </section>
+
+  <!-- 3. 주요 기능 -->
+  <section class="card proj-section">
+    <h2>주요 기능</h2>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <h3>회원/인증</h3>
+        <p>세션 기반 로그인, 권한 체크, 예약 이력과 연동</p>
+      </div>
+      <div class="arch-card">
+        <h3>인증 리뷰</h3>
+        <p>예약/방문 이력이 있는 사용자만 리뷰 작성 가능</p>
+      </div>
+      <div class="arch-card">
+        <h3>다중 파일 업로드</h3>
+        <p>파일 정보를 별도 테이블로 분리해 리뷰와 1:N 구성</p>
+      </div>
+      <div class="arch-card">
+        <h3>관리자</h3>
+        <p>매장 등록/비활성, 신고 리뷰 숨김 처리</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 주요 화면 (여기! 이미지 넣는 곳) -->
+  <section class="card proj-section">
+    <h2>주요 화면</h2>
+    <div class="screen-grid">
+      <figure class="screen-box is-image">
+        <img
+          src="../../assets/img/HonestPick_home.png"
+          alt="HonestPick 메인 화면"
+          class="preview-img"
+          data-caption="HonestPick 메인 화면: 매장 목록, 위치, 예약/후기 흐름 제공"
+        />
+        <figcaption class="caption">HonestPick 메인 화면</figcaption>
+      </figure>
+      <figure class="screen-box is-image">
+        <img
+          src="../../assets/img/HonestPick_storeList.png"
+          alt="매장 목록"
+          class="preview-img"
+          data-caption="매장 목록"
+        />
+        <figcaption class="caption">매장 목록</figcaption>
+      </figure>
+      <figure class="screen-box is-image">
+        <img
+          src="../../assets/img/HonestPick_restaurantDetail.png"
+          alt="매장 정보"
+          class="preview-img"
+          data-caption="매장 정보"
+        />
+        <figcaption class="caption">매장 정보</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. 기술 스택 / 모듈 -->
+  <section class="proj-columns">
+    <div class="card proj-info">
+      <h2>기술 스택</h2>
+      <ul>
+        <li><strong>Language</strong> : Java</li>
+        <li><strong>Web</strong> : JSP / Servlet, JSTL</li>
+        <li><strong>DB</strong> : Oracle</li>
+        <li><strong>Infra</strong> : Tomcat 9</li>
+        <li><strong>외부 API</strong> : Kakao Map, Toss 결제(점주 멤버십)</li>
+      </ul>
+    </div>
+    <div class="card proj-stack">
+      <h2>주요 모듈</h2>
+      <div class="stack-badges">
+        <span class="stack">예약</span>
+        <span class="stack">리뷰</span>
+        <span class="stack">첨부파일</span>
+        <span class="stack">매장</span>
+        <span class="stack">관리자</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DB 설계 포인트 -->
+  <section class="card proj-section">
+    <h2>DB 설계 포인트</h2>
+    <p>
+      리뷰와 첨부파일을 조인해 한 번에 가져오면 리뷰 하나가 파일 개수만큼 중복돼 내려오는 문제가 있어,
+      DAO 단계에서 <b>리뷰 1건 + 파일 리스트</b>로 합쳐주는 구조를 사용했습니다.
+    </p>
+    <ul class="bullet">
+      <li><code>REVIEW (review_id, member_id, store_id, content, rating, regdate ...)</code></li>
+      <li><code>REVIEW_FILE (file_id, review_id, org_name, save_name, size ...)</code></li>
+      <li><code>RESERVATION (resv_id, member_id, store_id, resv_date, status ...)</code></li>
+      <li><code>STORE (store_id, name, addr, tel, is_active ...)</code></li>
+    </ul>
+  </section>
+
+  <!-- 7. 모달 -->
+  <div class="modal-backdrop" id="hpModalBackdrop" style="display:none;">
+    <div class="modal-content">
+      <button class="modal-close" id="hpModalClose">닫기</button>
+      <img id="hpModalImg" src="" alt="screenshot preview" />
+      <div class="modal-caption" id="hpModalCaption"></div>
+    </div>
+  </div>
+</section>
