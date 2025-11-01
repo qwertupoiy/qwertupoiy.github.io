@@ -1,5 +1,5 @@
 /* ------------------------------
-   기본 세팅
+   기본
 ------------------------------ */
 * {
   box-sizing: border-box;
@@ -11,8 +11,8 @@
 body {
   display: flex;
   min-height: 100vh;
-  color: #222;
   background: #fafafa;
+  color: #222;
 }
 
 /* ------------------------------
@@ -27,7 +27,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .sidebar-header {
@@ -88,7 +88,7 @@ body {
 }
 
 /* ------------------------------
-   메인 영역
+   메인
 ------------------------------ */
 .content {
   margin-left: 250px;
@@ -111,17 +111,8 @@ body {
   padding: 20px 24px;
 }
 
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-
 /* ------------------------------
-   프로필
+   프로필 카드
 ------------------------------ */
 .profile-card {
   display: flex;
@@ -155,31 +146,51 @@ body {
   margin-bottom: 6px;
 }
 
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
 /* ------------------------------
-   중단 2열
+   가운데 2열
 ------------------------------ */
 .middle-grid {
   display: flex;
   gap: 20px;
-  align-items: stretch;
+  align-items: stretch; /* 두 열 높이 맞추기 */
 }
 
-/* 왼쪽(프로젝트) 좀 좁게 */
-.col-left {
+/* 각 열: 위아래 카드 있는 컬럼 */
+.middle-grid .col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* 왼쪽/오른쪽 비율 */
+.middle-grid .col-left {
   flex: 0.9;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  min-width: 0;
+}
+.middle-grid .col-right {
+  flex: 1.1;
 }
 
-/* 오른쪽(스킬) 좀 넓게 */
-.col-right {
-  flex: 1.1;
+/* ✨ 핵심: 각 열의 '아래 카드'를 남은 높이만큼 늘리기 */
+/* 왼쪽 열: 아래 카드 늘리기 */
+.col-left > .card:last-child {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  min-width: 0;
+}
+
+/* 오른쪽 열: 위 카드 늘리기 */
+.col-right > .card:first-child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ------------------------------
@@ -189,13 +200,13 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .project-links a {
   display: block;
   background: #fafafa;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 12px 14px;
   text-decoration: none;
   color: #000;
@@ -206,40 +217,30 @@ body {
   background: #efefef;
 }
 
-/* ✅ 줄바꿈 정렬 고정 */
 .project-title {
   display: block;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .project-meta {
-  display: block;       /* 설명 줄바꿈 */
+  display: block;
   font-size: 0.78rem;
   color: #6b6b6b;
   margin-bottom: 2px;
 }
 
 .project-date {
-  display: block;       /* 날짜 줄바꿈 */
+  display: block;
   font-size: 0.75rem;
   color: #999;
-  margin-top: 2px;
-}
-
-.project-more {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 0.8rem;
-  color: #333;
-  text-decoration: none;
 }
 
 /* ------------------------------
    Certificates
 ------------------------------ */
 .certificates-card {
-  min-height: 240px;
+  /* 위 flex:1 때문에 자동으로 늘어남 */
 }
 
 .cert-list {
@@ -251,7 +252,7 @@ body {
 
 .cert-item {
   background: #fafafa;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 12px 14px;
 }
 
@@ -271,11 +272,16 @@ body {
 /* ------------------------------
    Skills
 ------------------------------ */
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .skills-category {
   background: #fafafa;
   border-radius: 12px;
   padding: 15px 16px 12px;
-  margin-bottom: 3px;
 }
 
 .skills-category h4 {
@@ -311,10 +317,10 @@ body {
    Contact
 ------------------------------ */
 .contact-card {
-  padding: 16px 20px;
+  /* flex:1 덕분에 높이 늘어남 */
 }
 
-.contact-section ul {
+.contact-card ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -322,13 +328,13 @@ body {
   align-items: center;
 }
 
-.contact-section li {
+.contact-card li {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.contact-section a {
+.contact-card a {
   text-decoration: none;
   color: #111;
 }
@@ -349,20 +355,29 @@ body {
   .sidebar {
     transform: translateX(-100%);
   }
+
   .sidebar.active {
     transform: translateX(0);
   }
+
   .mobile-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
   }
+
   .middle-grid {
     flex-direction: column;
   }
-  .col-left,
-  .col-right {
-    flex: 1 1 auto;
+
+  .middle-grid .col-left,
+  .middle-grid .col-right {
+    flex: 1;
+  }
+
+  /* 모바일에서는 아래 카드 늘리지 말고 본문만큼 */
+  .middle-grid .col > .card:last-child {
+    flex: 0;
   }
 }

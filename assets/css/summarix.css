@@ -1,0 +1,263 @@
+/* Summarix 프로젝트 페이지 전용 */
+.proj-summarix {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* HERO */
+.proj-summarix .proj-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.proj-summarix .proj-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.proj-summarix .proj-sub {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.proj-summarix .proj-meta {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #999;
+}
+
+.proj-summarix .proj-hero-actions .btn-primary,
+.proj-summarix .proj-hero-actions .btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.82rem;
+}
+
+.proj-summarix .proj-hero-actions .btn-primary {
+  background: #111;
+  color: #fff;
+  padding: 9px 16px;
+}
+
+.proj-summarix .proj-hero-actions .btn-secondary {
+  background: #f4f4f4;
+  color: #222;
+  padding: 8px 13px;
+  margin-left: 6px;
+}
+
+/* 공통 섹션 */
+.proj-summarix .proj-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.proj-summarix .proj-section p {
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* 기능 카드 그리드 */
+.proj-summarix .arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.proj-summarix .arch-card {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 14px 14px 12px;
+}
+
+.proj-summarix .arch-card h3 {
+  margin-bottom: 4px;
+}
+
+/* 컬럼 */
+.proj-summarix .proj-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.proj-summarix .proj-info,
+.proj-summarix .proj-stack {
+  flex: 1;
+}
+
+.proj-summarix .proj-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.proj-summarix .proj-info li strong {
+  width: 105px;
+  display: inline-block;
+}
+
+/* 배지 */
+.proj-summarix .stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.proj-summarix .stack {
+  background: #f2f2f2;
+  border-radius: 999px;
+  padding: 6px 12px 5px;
+  font-size: 0.78rem;
+}
+
+/* 화면 그리드 */
+.proj-summarix .screen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.proj-summarix .screen-box {
+  background: #eee;
+  border-radius: 12px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #555;
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+
+.proj-summarix .screen-box.is-image {
+  background: #fff;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.proj-summarix .screen-box.is-image img.preview-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+}
+
+.proj-summarix .screen-box.is-image img.preview-img:hover {
+  transform: scale(1.015);
+}
+
+.proj-summarix .caption {
+  font-size: 0.72rem;
+  color: #777;
+  text-align: left;
+  width: 100%;
+}
+
+/* 모달 */
+.proj-summarix .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 18px;
+}
+
+.proj-summarix .modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px;
+  max-width: 800px;            /* 🔽 가로폭 줄임 */
+  width: min(90vw, 800px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-summarix .modal-content img {
+  width: auto;
+  max-width: 100%;
+  max-height: 85vh;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  object-fit: contain;
+  background: #000;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+  transform-origin: center center;
+}
+
+.proj-summarix .modal-close {
+  align-self: flex-end;
+  background: #111;
+  border: none;
+  color: #fff;
+  padding: 4px 13px 5px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.78rem;
+}
+
+.proj-summarix .modal-caption {
+  font-size: 0.78rem;
+  color: #555;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .proj-summarix .proj-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .proj-summarix .proj-columns {
+    flex-direction: column;
+  }
+  .proj-summarix .modal-content {
+    width: 100%;
+  }
+}
+
+.proj-summarix .proj-hero-actions .btn-demo {
+  background: #0072ff;
+  color: #fff;
+  padding: 8px 13px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: background 0.2s;
+}
+
+.proj-summarix .proj-hero-actions .btn-demo:hover {
+  background: #005cd4;
+}
+
+.proj-summarix .proj-hero-actions .btn-ppt {
+  background: #28a745;
+  color: #fff;
+  padding: 8px 13px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  margin-left: 6px;
+  transition: background 0.2s;
+}
+
+.proj-summarix .proj-hero-actions .btn-ppt:hover {
+  background: #1e8a38;
+}
