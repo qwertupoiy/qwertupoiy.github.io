@@ -1,114 +1,171 @@
 <section class="proj-wrapper proj-summarix">
-  <!-- 1. Hero -->
-  <section class="card proj-hero">
-    <div>
-      <h1>Summarix</h1>
-      <p class="proj-sub">AI로 경제 뉴스를 수집·요약하고 대시보드로 보여주는 분석 웹서비스</p>
-      <p class="proj-meta">2025.09 ~ 2025.10 · Spring Boot + FastAPI · 팀 프로젝트</p>
-    </div>
-    <div class="proj-hero-actions">
-      <a class="btn-secondary" href="index.html" data-page="index.html">← 메인으로</a>
-      <a class="btn-primary" href="https://github.com/qwertupoiy/summarix" target="_blank">GitHub 보기</a>
-      <a class="btn-demo" href="https://drive.google.com/file/d/10l2G4HUBxfuKQ8xT1BKUAJbg4XiFUsp_/view?usp=sharing" target="_blank">시연 영상</a>
-      <a class="btn-ppt" href="../../assets/docs/SUMMARIX_PDF.pdf" download>발표자료</a>
-    </div>
-  </section>
+    <!-- 1. Hero -->
+    <section class="card proj-hero">
+        <div>
+            <h1>Summarix</h1>
+            <p class="proj-sub">
+                경제가 어려운 사람도 흐름을 한눈에 볼 수 있도록<br>
+                뉴스·지표·여론 데이터를 통합 분석하는 AI 기반 경제 뉴스 플랫폼
+            </p>
+            <p class="proj-meta">
+                2025.09 ~ 2025.10 · Spring Boot + FastAPI · 팀 프로젝트 (백엔드/데이터 중심 기여)
+            </p>
+        </div>
+        <div class="proj-hero-actions">
+            <a class="btn-secondary" href="index.html" data-page="index.html">← 메인으로</a>
+            <a class="btn-primary" href="https://github.com/qwertupoiy/summarix" target="_blank">GitHub 보기</a>
+            <a class="btn-demo" href="https://drive.google.com/file/d/10l2G4HUBxfuKQ8xT1BKUAJbg4XiFUsp_/view?usp=sharing" target="_blank">시연 영상</a>
+            <a class="btn-ppt" href="../../assets/docs/SUMMARIX_PDF.pdf" download>발표자료</a>
+        </div>
+    </section>
 
-  <!-- 2. 개요 -->
-  <section class="card proj-section">
-    <h2>프로젝트 개요</h2>
-    <p>
-      경제 뉴스를 자동으로 수집해 요약하고, 감성/핫토픽을 분석해 한 화면에 보여주는 서비스입니다. <br>
-      분석 파트(FastAPI)와 서비스 파트(Spring Boot)를 분리해 <b>ML 파이프라인을 바꿔도 서비스는 안정적으로 유지</b>되도록 설계했습니다. <br>
-      MongoDB로 사용자 관심사를 저장해 개인화 추천도 제공합니다.
-    </p>
-  </section>
+    <!-- 2. 개요 -->
+    <section class="card proj-section">
+        <h2>프로젝트 개요</h2>
+        <p>
+            경제 뉴스는 용어도 어렵고 정보도 많아, 처음 접하는 사람은 <b>무엇을 봐야 할지</b>부터 막히는 경우가 많습니다.<br>
+            Summarix는 경제 뉴스, 유튜브 댓글, 경제 지표 데이터를 모아 AI로 분석하고,
+            <b>오늘의 경제 흐름을 한 화면에서 볼 수 있게</b> 만든 웹서비스입니다.
+        </p>
+        <p>
+            분석 서버(FastAPI)와 서비스 서버(Spring Boot)를 분리한 <b>이중 서버 구조</b>로 설계해
+            ML/AI 파이프라인을 바꿔도 웹서비스는 그대로 유지될 수 있도록 했습니다.<br>
+            저는 이 구조 안에서 특히 <b>사용자 선호도 기반 개인화 도서/영상 추천 기능</b>을 중심으로 백엔드를 구현했습니다.
+        </p>
+        <ul class="bullet">
+            <li>기간: 2025.09 ~ 2025.10</li>
+            <li>구성: 팀 프로젝트 · Spring Boot(Web) + FastAPI(AI/Data)</li>
+            <li>역할: 전체 데이터 흐름 설계 참여 및 개인화 추천 모듈 구현 중심 기여</li>
+        </ul>
+    </section>
 
-  <!-- 3. 주요 기능 -->
-  <section class="card proj-section">
-    <h2>주요 기능</h2>
-    <div class="arch-grid">
-      <div class="arch-card">
-        <h3>뉴스 수집</h3>
-        <p>경제 카테고리 기사 주기적 수집</p>
-      </div>
-      <div class="arch-card">
-        <h3>요약/감성</h3>
-        <p>FastAPI에 요청해 요약/감성/키워드 뽑기</p>
-      </div>
-      <div class="arch-card">
-        <h3>대시보드</h3>
-        <p>실시간 키워드, 감성 추이, 유튜브 댓글 분석 결과 노출</p>
-      </div>
-      <div class="arch-card">
-        <h3>개인화 추천</h3>
-        <p>MongoDB에 저장된 관심사 기반 도서/영상 추천</p>
-      </div>
-    </div>
-  </section>
+    <!-- 3. 주요 기능 -->
+    <section class="card proj-section">
+        <h2>주요 기능</h2>
+        <div class="arch-grid">
+            <div class="arch-card">
+                <h3>경제 뉴스 수집 · 요약</h3>
+                <p>외부 API에서 경제 뉴스를 주기적으로 수집하고, AI로 핵심 내용을 자동 요약합니다.</p>
+            </div>
+            <div class="arch-card">
+                <h3>감성 · 핫토픽 분석</h3>
+                <p>뉴스 본문과 유튜브 댓글을 분석해 긍·부정 감성, 주요 키워드, 급등 이슈를 추출합니다.</p>
+            </div>
+            <div class="arch-card">
+                <h3>대시보드 시각화</h3>
+                <p>키워드 트렌드, 감성 변화, 여론 분석 결과를 그래프·차트로 한 화면에 보여줍니다.</p>
+            </div>
+            <div class="arch-card">
+                <h3>개인화 추천</h3>
+                <p>MongoDB에 저장된 선호 데이터를 기반으로 경제 도서와 유튜브 영상을 개인별로 추천합니다.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- 5. 화면 -->
-  <section class="card proj-section">
-    <h2>주요 화면</h2>
-    <div class="screen-grid">
-      <figure class="screen-box is-image">
-        <img
-          src="https://github.com/user-attachments/assets/ad418c9c-9bb6-4164-97e3-4563572a9b72"
-          alt="Summarix 대시보드 화면"
-          class="preview-img"
-          data-caption="대시보드: 실시간 경제 키워드, 감성 추이, 유튜브 의견 분석 결과를 한 화면에 표시"
-        />
-        <figcaption class="caption">대시보드 메인</figcaption>
-      </figure>
-      <figure class="screen-box is-image">
-        <img
-          src="../../assets/docs/Summarix_news.png"
-          alt="뉴스 요약"
-          class="preview-img"
-          data-caption="뉴스 요약"
-        />
-        <figcaption class="caption">뉴스 요약</figcaption>
-      </figure>
-      <figure class="screen-box is-image">
-        <img
-          src="../../assets/docs/Summarix_recommend.png"
-          alt="개인화 추천"
-          class="preview-img"
-          data-caption="개인화 추천"
-        />
-        <figcaption class="caption">개인화 추천</figcaption>
-      </figure>
-    </div>
-  </section>
+    <!-- 4. 주요 화면 -->
+    <section class="card proj-section">
+        <h2>주요 화면</h2>
+        <div class="screen-grid">
+            <figure class="screen-box is-image">
+                <img
+                        src="https://github.com/user-attachments/assets/ad418c9c-9bb6-4164-97e3-4563572a9b72"
+                        alt="Summarix 대시보드 화면"
+                        class="preview-img"
+                        data-caption="대시보드: 실시간 경제 키워드, 감성 추이, 유튜브 의견 분석 결과를 한 화면에 표시"
+                />
+                <figcaption class="caption">대시보드 메인</figcaption>
+            </figure>
+            <figure class="screen-box is-image">
+                <img
+                        src="../../assets/docs/Summarix_news.png"
+                        alt="뉴스 요약"
+                        class="preview-img"
+                        data-caption="뉴스 요약"
+                />
+                <figcaption class="caption">뉴스 요약</figcaption>
+            </figure>
+            <figure class="screen-box is-image">
+                <img
+                        src="../../assets/docs/Summarix_recommend.png"
+                        alt="개인화 추천"
+                        class="preview-img"
+                        data-caption="개인화 추천"
+                />
+                <figcaption class="caption">개인화 추천</figcaption>
+            </figure>
+        </div>
+    </section>
 
-  <!-- 4. 스택 -->
-  <section class="proj-columns">
-    <div class="card proj-info">
-      <h2>기술 스택</h2>
-      <ul>
-        <li><strong>Service</strong> : Spring Boot</li>
-        <li><strong>Analysis</strong> : FastAPI (Python)</li>
-        <li><strong>DB</strong> : MongoDB Atlas</li>
-        <li><strong>Data</strong> : Pandas, Transformers</li>
-        <li><strong>Auth</strong> : 세션/쿠키 기반 로그인</li>
-      </ul>
-    </div>
-    <div class="card proj-stack">
-      <h2>특징</h2>
-      <div class="stack-badges">
-        <span class="stack">수집 → 분석 → 시각화</span>
-        <span class="stack">Spring ↔ FastAPI 연동</span>
-        <span class="stack">개인화 추천</span>
-      </div>
-    </div>
-  </section>
+    <!-- 5. 기술 스택 / 주요 모듈 -->
+    <section class="proj-columns">
+        <div class="card proj-info">
+            <h2>기술 스택</h2>
+            <ul>
+                <li><strong>Service</strong> : Spring Boot (Java)</li>
+                <li><strong>Analysis</strong> : FastAPI (Python)</li>
+                <li><strong>DB</strong> : MongoDB Atlas</li>
+                <li><strong>Data</strong> : Pandas, Transformers</li>
+                <li><strong>AI</strong> : GPT 기반 요약/챗봇, 감성 분석</li>
+            </ul>
+        </div>
+        <div class="card proj-stack">
+            <h2>주요 모듈</h2>
+            <div class="stack-badges">
+                <span class="stack">데이터 수집(뉴스/유튜브/지표)</span>
+                <span class="stack">전처리 · 분석 · 요약</span>
+                <span class="stack">감성·키워드 대시보드</span>
+                <span class="stack">개인화 도서 추천</span>
+                <span class="stack">개인화 영상 추천</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- 6. 모달 -->
-  <div class="modal-backdrop" id="sxModalBackdrop" style="display:none;">
-    <div class="modal-content">
-      <button class="modal-close" id="sxModalClose">닫기</button>
-      <img id="sxModalImg" src="" alt="screenshot preview" />
-      <div class="modal-caption" id="sxModalCaption"></div>
+    <!-- 6. 담당 역할 & 기여 -->
+    <section class="card proj-section">
+        <h2>담당 역할 &amp; 기여</h2>
+        <p>
+            백엔드 관점에서 <b>데이터가 수집 → 분석 → 사용자에게 도착하는 흐름</b>을 함께 설계하고,
+            그 중 개인화 추천과 서버 간 연동 부분을 중점적으로 구현했습니다.
+        </p>
+        <ul class="bullet">
+            <li>Spring Boot(Web) ↔ FastAPI(AI/Data) 이중 서버 구조 및 응답 포맷 설계에 참여</li>
+            <li>뉴스/댓글/지표 분석 결과를 위한 DTO 및 JSON 응답 구조 정의</li>
+            <li>회원가입 시 카테고리 선호도(Explicit) 설문 저장 로직 및 스키마 설계</li>
+            <li>사용자 활동을 확장 가능하게 저장하기 위한 <b>Implicit 선호 데이터</b> 구조 설계</li>
+            <li>MongoDB에 사용자 선호 데이터를 저장하고, 이를 기반으로 경제 도서·유튜브 영상 추천 기능 구현</li>
+        </ul>
+    </section>
+
+    <!-- 7. 기술적 고민 & 인사이트 -->
+    <section class="card proj-section">
+        <h2>기술적 고민 &amp; 인사이트</h2>
+        <ul class="bullet">
+            <li>AI 분석 서버와 웹 서버를 분리해, 모델·파이프라인이 바뀌어도 서비스는 안정적으로 유지되는 구조를 경험했습니다.</li>
+            <li>개인화 추천을 위해 문서형 DB(MongoDB)를 사용하고, 선호 데이터를 계층형 구조로 설계해 향후 활동 로그까지 확장 가능하게 했습니다.</li>
+            <li>“AI가 분석한 결과”를 보여주는 데서 끝나지 않고, <b>어떤 책·영상으로 다음 단계를 공부할지</b>까지 연결하는 사용자 여정을 고민했습니다.</li>
+        </ul>
+    </section>
+
+    <!-- 8. 데이터 & 분석 포인트 -->
+    <section class="card proj-section">
+        <h2>데이터 &amp; 분석 포인트</h2>
+        <p>
+            서로 다른 소스의 데이터를 결합해 경제 흐름을 입체적으로 보여주는 것을 목표로 했습니다.
+        </p>
+        <ul class="bullet">
+            <li>뉴스: 경제 카테고리 기사 수집(제목, 본문, 언론사, 발행일 등)</li>
+            <li>유튜브: 댓글·좋아요 기반 감성 및 여론 분석</li>
+            <li>경제 지표: ECOS/FRED 등에서 주요 지표를 가져와 추이 그래프로 제공</li>
+            <li>시각화: 키워드 랭킹, 감성 비율, 트렌드 그래프로 “지금 시장 분위기”를 직관적으로 표현</li>
+        </ul>
+    </section>
+
+    <!-- 9. 모달 -->
+    <div class="modal-backdrop" id="sxModalBackdrop" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" id="sxModalClose">닫기</button>
+            <img id="sxModalImg" src="" alt="screenshot preview" />
+            <div class="modal-caption" id="sxModalCaption"></div>
+        </div>
     </div>
-  </div>
 </section>

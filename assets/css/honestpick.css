@@ -30,25 +30,62 @@
   color: #999;
 }
 
-.proj-honestpick .proj-hero-actions .btn-primary,
-.proj-honestpick .proj-hero-actions .btn-secondary {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 0.82rem;
+/* HERO 버튼 영역 */
+.proj-honestpick .proj-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
+.proj-honestpick .proj-hero-actions a {
+  text-decoration: none;
+}
+
+/* 공통 버튼 스타일 */
+.proj-honestpick .proj-hero-actions .btn-primary,
+.proj-honestpick .proj-hero-actions .btn-secondary,
+.proj-honestpick .proj-hero-actions .btn-demo,
+.proj-honestpick .proj-hero-actions .btn-ppt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* 버튼 개별 색상 */
 .proj-honestpick .proj-hero-actions .btn-primary {
   background: #111;
   color: #fff;
-  padding: 9px 16px;
 }
 
 .proj-honestpick .proj-hero-actions .btn-secondary {
   background: #f4f4f4;
   color: #222;
-  padding: 8px 13px;
-  margin-left: 6px;
+}
+
+.proj-honestpick .proj-hero-actions .btn-demo {
+  background: #0072ff;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.proj-honestpick .proj-hero-actions .btn-demo:hover {
+  background: #005cd4;
+}
+
+.proj-honestpick .proj-hero-actions .btn-ppt {
+  background: #28a745;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.proj-honestpick .proj-hero-actions .btn-ppt:hover {
+  background: #1e8a38;
 }
 
 /* 공통 섹션 */
@@ -95,6 +132,7 @@
   color: #000;
 }
 
+/* 주요 모듈 배지 */
 .proj-honestpick .stack-badges {
   display: flex;
   flex-wrap: wrap;
@@ -190,18 +228,17 @@
   background: #fff;
   border-radius: 16px;
   padding: 14px;
-  max-width: 800px;              /* 🔽 모달 가로폭 줄임 */
-  width: min(90vw, 800px);
+  max-width: 90vw;          /* 이미지 + 패딩 기준으로, 기본 상한만 */
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* 모달 이미지 - 확대/축소 대응 */
+/* 모달 이미지 - JS에서 transform 제어 */
 .proj-honestpick .modal-content img {
   width: auto;
   max-width: 100%;
-  max-height: 85vh;               /* 화면보다 커지지 않게 */
+  max-height: 85vh;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -239,36 +276,6 @@
     flex-direction: column;
   }
   .proj-honestpick .modal-content {
-    width: 100%;
+    max-width: 100%;
   }
-}
-
-.proj-honestpick .proj-hero-actions .btn-demo {
-  background: #0072ff;
-  color: #fff;
-  padding: 8px 13px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  text-decoration: none;
-  margin-left: 6px;
-  transition: background 0.2s;
-}
-
-.proj-honestpick .proj-hero-actions .btn-demo:hover {
-  background: #005cd4;
-}
-
-.proj-honestpick .proj-hero-actions .btn-ppt {
-  background: #28a745;
-  color: #fff;
-  padding: 8px 13px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  text-decoration: none;
-  margin-left: 6px;
-  transition: background 0.2s;
-}
-
-.proj-honestpick .proj-hero-actions .btn-ppt:hover {
-  background: #1e8a38;
 }

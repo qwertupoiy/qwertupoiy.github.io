@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   background: #fafafa;
   color: #222;
+  line-height: 1.5;
 }
 
 /* ------------------------------
@@ -146,6 +147,13 @@ body {
   margin-bottom: 6px;
 }
 
+.profile-left p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
 .section-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -154,12 +162,12 @@ body {
 }
 
 /* ------------------------------
-   가운데 2열
+   가운데 2열 (데스크톱)
 ------------------------------ */
 .middle-grid {
   display: flex;
-  gap: 20px;
-  align-items: stretch; /* 두 열 높이 맞추기 */
+  gap: 16px;          /* 20 → 16 : 전체 폭 조금 더 확보 */
+  align-items: stretch;
 }
 
 /* 각 열: 위아래 카드 있는 컬럼 */
@@ -172,13 +180,12 @@ body {
 
 /* 왼쪽/오른쪽 비율 */
 .middle-grid .col-left {
-  flex: 0.9;
+  flex: 0.8;          /* 0.9 → 0.8 : 왼쪽 조금 좁게 */
 }
 .middle-grid .col-right {
-  flex: 1.1;
+  flex: 1.2;          /* 1.1 → 1.2 : 오른쪽 넓게 */
 }
 
-/* ✨ 핵심: 각 열의 '아래 카드'를 남은 높이만큼 늘리기 */
 /* 왼쪽 열: 아래 카드 늘리기 */
 .col-left > .card:last-child {
   flex: 1;
@@ -227,7 +234,16 @@ body {
   display: block;
   font-size: 0.78rem;
   color: #6b6b6b;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+}
+
+/* 새로 추가된 설명 텍스트 */
+.project-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 4px;
+  line-height: 1.5;
 }
 
 .project-date {
@@ -240,7 +256,7 @@ body {
    Certificates
 ------------------------------ */
 .certificates-card {
-  /* 위 flex:1 때문에 자동으로 늘어남 */
+  /* flex:1 때문에 자동으로 늘어남 */
 }
 
 .cert-list {
@@ -278,6 +294,12 @@ body {
   gap: 12px;
 }
 
+.skills-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
 .skills-category {
   background: #fafafa;
   border-radius: 12px;
@@ -306,6 +328,10 @@ body {
   font-size: 0.9rem;
   color: #333;
   transition: all 0.15s;
+}
+
+.skill-btn strong {
+  font-weight: 700;
 }
 
 .skill-btn:hover {
@@ -354,6 +380,7 @@ body {
 
   .sidebar {
     transform: translateX(-100%);
+    transition: transform 0.2s ease-out;
   }
 
   .sidebar.active {
@@ -367,8 +394,10 @@ body {
     margin-bottom: 20px;
   }
 
+  /* 모바일에서는 세로 레이아웃 */
   .middle-grid {
     flex-direction: column;
+    gap: 20px;
   }
 
   .middle-grid .col-left,
