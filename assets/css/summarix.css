@@ -30,28 +30,65 @@
   color: #999;
 }
 
-.proj-summarix .proj-hero-actions .btn-primary,
-.proj-summarix .proj-hero-actions .btn-secondary {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 0.82rem;
+/* HERO 버튼 영역 */
+.proj-summarix .proj-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
+.proj-summarix .proj-hero-actions a {
+  text-decoration: none;
+}
+
+/* 공통 버튼 스타일 */
+.proj-summarix .proj-hero-actions .btn-primary,
+.proj-summarix .proj-hero-actions .btn-secondary,
+.proj-summarix .proj-hero-actions .btn-demo,
+.proj-summarix .proj-hero-actions .btn-ppt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* 버튼 개별 색상 */
 .proj-summarix .proj-hero-actions .btn-primary {
   background: #111;
   color: #fff;
-  padding: 9px 16px;
 }
 
 .proj-summarix .proj-hero-actions .btn-secondary {
   background: #f4f4f4;
   color: #222;
-  padding: 8px 13px;
-  margin-left: 6px;
 }
 
-/* 공통 섹션 */
+.proj-summarix .proj-hero-actions .btn-demo {
+  background: #0072ff;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.proj-summarix .proj-hero-actions .btn-demo:hover {
+  background: #005cd4;
+}
+
+.proj-summarix .proj-hero-actions .btn-ppt {
+  background: #28a745;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.proj-summarix .proj-hero-actions .btn-ppt:hover {
+  background: #1e8a38;
+}
+
+/* 공통 섹션 텍스트 */
 .proj-summarix .proj-section h2 {
   font-size: 1.25rem;
   font-weight: 700;
@@ -61,6 +98,20 @@
 .proj-summarix .proj-section p {
   line-height: 1.5;
   margin-bottom: 6px;
+}
+
+/* 🔹 개요 카드 안 bullet 들여쓰기 (HonestPick과 통일) */
+.proj-summarix .bullet {
+  list-style: disc;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* 혹시 <ul class="bullet"> 쓴 경우를 위해 한 번 더 명시 */
+.proj-summarix .proj-section ul.bullet {
+  margin-left: 18px;
 }
 
 /* 기능 카드 그리드 */
@@ -80,7 +131,7 @@
   margin-bottom: 4px;
 }
 
-/* 컬럼 */
+/* 컬럼 (정보/특징) */
 .proj-summarix .proj-columns {
   display: flex;
   gap: 20px;
@@ -103,7 +154,7 @@
   display: inline-block;
 }
 
-/* 배지 */
+/* 주요 모듈 배지 */
 .proj-summarix .stack-badges {
   display: flex;
   flex-wrap: wrap;
@@ -180,8 +231,7 @@
   background: #fff;
   border-radius: 16px;
   padding: 14px;
-  max-width: 800px;            /* 🔽 가로폭 줄임 */
-  width: min(90vw, 800px);
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -228,36 +278,6 @@
     flex-direction: column;
   }
   .proj-summarix .modal-content {
-    width: 100%;
+    max-width: 100%;
   }
-}
-
-.proj-summarix .proj-hero-actions .btn-demo {
-  background: #0072ff;
-  color: #fff;
-  padding: 8px 13px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  text-decoration: none;
-  margin-left: 6px;
-  transition: background 0.2s;
-}
-
-.proj-summarix .proj-hero-actions .btn-demo:hover {
-  background: #005cd4;
-}
-
-.proj-summarix .proj-hero-actions .btn-ppt {
-  background: #28a745;
-  color: #fff;
-  padding: 8px 13px;
-  border-radius: 10px;
-  font-size: 0.82rem;
-  text-decoration: none;
-  margin-left: 6px;
-  transition: background 0.2s;
-}
-
-.proj-summarix .proj-hero-actions .btn-ppt:hover {
-  background: #1e8a38;
 }

@@ -1,136 +1,200 @@
 <section class="proj-wrapper proj-honestpick">
-  <!-- 1. Hero -->
-  <section class="card proj-hero">
-    <div>
-      <h1>HonestPick</h1>
-      <p class="proj-sub">예약/방문한 사용자만 리뷰를 남길 수 있는 음식점 리뷰 · 예약 웹서비스</p>
-      <p class="proj-meta">2025.05 ~ 2025.06 · JSP / Servlet · 팀 프로젝트</p>
-    </div>
-    <div class="proj-hero-actions">
-      <a class="btn-secondary" href="index.html" data-page="index.html">← 메인으로</a>
-      <a class="btn-primary" href="https://github.com/qwertupoiy/HonestPick" target="_blank">GitHub 보기</a>
-      <a class="btn-demo" href="https://drive.google.com/file/d/1bDkzHl1yo9qC2cL4pnf8bBQMRf2Ma54k/view?usp=sharing" target="_blank">시연 영상</a>
-      <a class="btn-ppt" href="../../assets/docs/HonestPick_PDF.pdf" download>발표자료</a>
-    </div>
-  </section>
+    <!-- 1. Hero -->
+    <section class="card proj-hero">
+        <div>
+            <h1>HonestPick</h1>
+            <p class="proj-sub">예약/방문한 사용자만 리뷰를 남길 수 있는 음식점 리뷰 · 예약 웹서비스</p>
+            <p class="proj-meta">2025.05 ~ 2025.06 · Java / JSP / Servlet / Oracle · 백엔드 2인 팀 프로젝트</p>
+        </div>
+        <div class="proj-hero-actions">
+            <a class="btn-secondary" href="index.html" data-page="index.html">← 메인으로</a>
+            <a class="btn-primary" href="https://github.com/qwertupoiy/HonestPick" target="_blank">GitHub 보기</a>
+            <a class="btn-demo" href="https://drive.google.com/file/d/1bDkzHl1yo9qC2cL4pnf8bBQMRf2Ma54k/view?usp=sharing" target="_blank">시연 영상</a>
+            <a class="btn-ppt" href="../../assets/docs/HonestPick_PDF.pdf" download>발표자료</a>
+        </div>
+    </section>
 
-  <!-- 2. 개요 -->
-  <section class="card proj-section">
-    <h2>프로젝트 개요</h2>
-    <p>
-      리뷰 서비스의 가장 큰 문제는 “안 가본 사람이 남기는 리뷰”였습니다. <br>
-      HonestPick은 <b>예약 또는 방문 이력이 있는 사용자에게만</b> 리뷰 권한을 주는 방식으로 리뷰의 신뢰도를 높였습니다. <br>
-      추가로 점주가 멤버십을 결제하면 매장이 우선 노출되도록 해 <b>사용자-점주-관리자</b> 모두에게 이득이 되는 구조를 목표로 했습니다.
-    </p>
-    <ul class="bullet">
-      <li>예약 → 방문처리 → 리뷰작성 으로 이어지는 플로우</li>
-      <li>리뷰 1건에 최대 5개 이미지 첨부 (JSP MultipartRequest)</li>
-      <li>관리자 페이지에서 매장 등록/비공개, 리뷰 관리</li>
-    </ul>
-  </section>
+    <!-- 2. 개요 -->
+    <section class="card proj-section">
+        <h2>프로젝트 개요</h2>
+        <p>
+            기존 음식점·지도 서비스의 리뷰는 광고성 글이나 실제 방문과 무관한 후기가 섞여 있어
+            사용자가 <b>방문 전에 믿고 참고하기 어렵다</b>는 문제가 있었습니다.<br>
+            HonestPick은 우리 서비스에서 <b>예약·방문 이력이 있는 사용자만 리뷰를 작성</b>할 수 있게 해
+            리뷰의 신뢰도를 구조적으로 높인 예약 기반 리뷰·예약 웹서비스입니다.
+        </p>
+        <p>
+            점주가 멤버십을 결제하면 매장이 상단에 노출되도록 설계해,
+            <b>사용자(신뢰도 높은 리뷰) · 점주(노출 효과) · 관리자(운영 편의)</b> 모두에게 이득이 되는 구조를 목표로 했습니다.
+        </p>
+        <ul class="bullet">
+            <li>기간: 2025.05 ~ 2025.06</li>
+            <li>구성: 백엔드 개발자 2인 팀</li>
+            <li>역할: 예약·리뷰·결제·관리자 기능을 포함한 백엔드 핵심 기능 전반 담당</li>
+        </ul>
+    </section>
 
-  <!-- 3. 주요 기능 -->
-  <section class="card proj-section">
-    <h2>주요 기능</h2>
-    <div class="arch-grid">
-      <div class="arch-card">
-        <h3>회원/인증</h3>
-        <p>세션 기반 로그인, 권한 체크, 예약 이력과 연동</p>
-      </div>
-      <div class="arch-card">
-        <h3>인증 리뷰</h3>
-        <p>예약/방문 이력이 있는 사용자만 리뷰 작성 가능</p>
-      </div>
-      <div class="arch-card">
-        <h3>다중 파일 업로드</h3>
-        <p>파일 정보를 별도 테이블로 분리해 리뷰와 1:N 구성</p>
-      </div>
-      <div class="arch-card">
-        <h3>관리자</h3>
-        <p>매장 등록/비활성, 신고 리뷰 숨김 처리</p>
-      </div>
-    </div>
-  </section>
+    <!-- 3. 주요 기능 -->
+    <section class="card proj-section">
+        <h2>주요 기능</h2>
+        <div class="arch-grid">
+            <div class="arch-card">
+                <h3>예약 기반 리뷰 시스템</h3>
+                <p>서비스 안에서 예약·방문 이력이 확인된 사용자만 리뷰를 작성할 수 있도록 제한해 허위 리뷰를 구조적으로 차단합니다.</p>
+            </div>
+            <div class="arch-card">
+                <h3>예약 · 방문 흐름</h3>
+                <p>매장 선택 → 예약 → 방문 완료 → 리뷰 작성까지 이어지는 실사용 플로우를 구현했습니다.</p>
+            </div>
+            <div class="arch-card">
+                <h3>점주 멤버십 결제</h3>
+                <p>Toss 결제 API를 연동해 점주 멤버십 결제 시 매장을 상단에 노출하고, 결제 이력을 별도 테이블로 관리합니다.</p>
+            </div>
+            <div class="arch-card">
+                <h3>관리자 및 제재</h3>
+                <p>관리자 페이지에서 회원/매장/리뷰를 관리하고, 신고된 리뷰를 숨김 처리할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- 6. 주요 화면 (여기! 이미지 넣는 곳) -->
-  <section class="card proj-section">
-    <h2>주요 화면</h2>
-    <div class="screen-grid">
-      <figure class="screen-box is-image">
-        <img
-          src="../../assets/img/HonestPick_home.png"
-          alt="HonestPick 메인 화면"
-          class="preview-img"
-          data-caption="HonestPick 메인 화면: 매장 목록, 위치, 예약/후기 흐름 제공"
-        />
-        <figcaption class="caption">HonestPick 메인 화면</figcaption>
-      </figure>
-      <figure class="screen-box is-image">
-        <img
-          src="../../assets/img/HonestPick_storeList.png"
-          alt="매장 목록"
-          class="preview-img"
-          data-caption="매장 목록"
-        />
-        <figcaption class="caption">매장 목록</figcaption>
-      </figure>
-      <figure class="screen-box is-image">
-        <img
-          src="../../assets/img/HonestPick_restaurantDetail.png"
-          alt="매장 정보"
-          class="preview-img"
-          data-caption="매장 정보"
-        />
-        <figcaption class="caption">매장 정보</figcaption>
-      </figure>
-    </div>
-  </section>
+    <!-- 4. 주요 화면 -->
+    <section class="card proj-section">
+        <h2>주요 화면</h2>
+        <div class="screen-grid">
+            <figure class="screen-box is-image">
+                <img
+                        src="../../assets/img/HonestPick_home.png"
+                        alt="HonestPick 메인 화면"
+                        class="preview-img"
+                        data-caption="HonestPick 메인 화면: 매장 목록, 위치, 예약/후기 흐름 제공"
+                />
+                <figcaption class="caption">HonestPick 메인 화면</figcaption>
+            </figure>
+            <figure class="screen-box is-image">
+                <img
+                        src="../../assets/img/HonestPick_storeList.png"
+                        alt="매장 목록"
+                        class="preview-img"
+                        data-caption="매장 목록"
+                />
+                <figcaption class="caption">매장 목록</figcaption>
+            </figure>
+            <figure class="screen-box is-image">
+                <img
+                        src="../../assets/img/HonestPick_restaurantDetail.png"
+                        alt="매장 정보"
+                        class="preview-img"
+                        data-caption="매장 정보"
+                />
+                <figcaption class="caption">매장 정보</figcaption>
+            </figure>
+        </div>
+    </section>
 
-  <!-- 4. 기술 스택 / 모듈 -->
-  <section class="proj-columns">
-    <div class="card proj-info">
-      <h2>기술 스택</h2>
-      <ul>
-        <li><strong>Language</strong> : Java</li>
-        <li><strong>Web</strong> : JSP / Servlet, JSTL</li>
-        <li><strong>DB</strong> : Oracle</li>
-        <li><strong>Infra</strong> : Tomcat 9</li>
-        <li><strong>외부 API</strong> : Kakao Map, Toss 결제(점주 멤버십)</li>
-      </ul>
-    </div>
-    <div class="card proj-stack">
-      <h2>주요 모듈</h2>
-      <div class="stack-badges">
-        <span class="stack">예약</span>
-        <span class="stack">리뷰</span>
-        <span class="stack">첨부파일</span>
-        <span class="stack">매장</span>
-        <span class="stack">관리자</span>
-      </div>
-    </div>
-  </section>
+    <!-- 5. 기술 스택 / 주요 모듈 -->
+    <section class="proj-columns">
+        <div class="card proj-info">
+            <h2>기술 스택</h2>
+            <ul>
+                <li><strong>Language</strong> : Java</li>
+                <li><strong>Web</strong> : JSP / Servlet, JSTL</li>
+                <li><strong>DB</strong> : Oracle</li>
+                <li><strong>Infra</strong> : Tomcat 9</li>
+                <li><strong>외부 API</strong> : Kakao Map, Toss 결제(점주 멤버십)</li>
+            </ul>
+        </div>
+        <div class="card proj-stack">
+            <h2>주요 모듈</h2>
+            <div class="stack-badges">
+                <span class="stack">회원 · 인증</span>
+                <span class="stack">매장 · 메뉴 관리</span>
+                <span class="stack">예약 · 방문 처리</span>
+                <span class="stack">인증 리뷰 · 첨부파일</span>
+                <span class="stack">점주 멤버십 · 결제</span>
+                <span class="stack">관리자 콘솔</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- 5. DB 설계 포인트 -->
-  <section class="card proj-section">
-    <h2>DB 설계 포인트</h2>
-    <p>
-      리뷰와 첨부파일을 조인해 한 번에 가져오면 리뷰 하나가 파일 개수만큼 중복돼 내려오는 문제가 있어,
-      DAO 단계에서 <b>리뷰 1건 + 파일 리스트</b>로 합쳐주는 구조를 사용했습니다.
-    </p>
-    <ul class="bullet">
-      <li><code>REVIEW (review_id, member_id, store_id, content, rating, regdate ...)</code></li>
-      <li><code>REVIEW_FILE (file_id, review_id, org_name, save_name, size ...)</code></li>
-      <li><code>RESERVATION (resv_id, member_id, store_id, resv_date, status ...)</code></li>
-      <li><code>STORE (store_id, name, addr, tel, is_active ...)</code></li>
-    </ul>
-  </section>
+    <!-- 6. 역할 및 기여 -->
+    <section class="card proj-section">
+        <h2>담당 역할 &amp; 기여</h2>
+        <p>백엔드 개발자로서 핵심 기능 전반을 설계·구현하며 단순 CRUD를 넘어 서비스 흐름과 데이터 구조를 함께 고민했습니다.</p>
+        <ul class="bullet">
+            <li>음식점/메뉴/리뷰/예약 도메인의 CRUD 및 비즈니스 로직 설계·구현</li>
+            <li>예약 정보와 방문 상태를 기반으로 한 <b>리뷰 작성 권한 검증 로직</b> 구현</li>
+            <li>Toss 결제 API 연동 및 점주 멤버십 결제/갱신 이력 관리, 상단 노출 로직 설계</li>
+            <li>Kakao 지도 API 연동을 통한 위치 기반 매장 검색 및 상세 화면 구현</li>
+            <li>세션/쿠키 기반 로그인 유지 및 자동 로그인 기능 구현</li>
+        </ul>
+    </section>
 
-  <!-- 7. 모달 -->
-  <div class="modal-backdrop" id="hpModalBackdrop" style="display:none;">
-    <div class="modal-content">
-      <button class="modal-close" id="hpModalClose">닫기</button>
-      <img id="hpModalImg" src="" alt="screenshot preview" />
-      <div class="modal-caption" id="hpModalCaption"></div>
+    <!-- 7. 기술적 고민 & 인사이트 -->
+    <section class="card proj-section">
+        <h2>기술적 고민 &amp; 인사이트</h2>
+        <ul class="bullet">
+            <li>JSP/Servlet 구조를 기능 단위로 분리하고 URL 패턴을 정리해 유지보수성을 높였습니다.</li>
+            <li>리뷰·예약·매장을 함께 조회하는 복합 JOIN 쿼리를 작성하며 데이터 정합성과 성능을 함께 고려했습니다.</li>
+            <li>외부 API(Toss, Kakao)와 세션/쿠키를 함께 사용하며 실제 서비스에 가까운 로그인·결제 흐름을 설계해 볼 수 있었습니다.</li>
+        </ul>
+    </section>
+
+    <!-- 8. DB 설계 포인트 -->
+    <section class="card proj-section">
+        <h2>DB 설계 포인트</h2>
+        <p>
+            HonestPick의 DB는 <b>“예약한 사람만 리뷰를 남길 수 있다”</b>는 규칙을 지키는 것과
+            사용자·점주·관리자 역할을 분리하는 데 초점을 맞춰 설계했습니다.
+            핵심 도메인인 회원(Member), 매장(Store), 예약(Reservation), 리뷰(Review)를 명확히 나누고
+            외래키로 관계를 묶어 비즈니스 규칙을 그대로 데이터 모델에 녹였습니다.
+        </p>
+        <ul class="bullet">
+            <li>
+                <code>Member</code> – 서비스의 기본 사용자 정보 테이블로,
+                점주·일반 회원·관리자(Admin 플래그)까지 같은 스키마에서 관리합니다.
+            </li>
+            <li>
+                <code>Store</code> – 점주 계정(<code>MemberNo</code>)와 1:N 관계로 연결된 매장 정보 테이블입니다.
+                주소, 영업시간, 소개글, 시설 등 검색/상세 화면에 필요한 정보와
+                <code>MemberShip</code> 컬럼으로 멤버십(상단 노출) 만료일을 함께 관리합니다.
+            </li>
+            <li>
+                <code>Reservation</code> – 회원(<code>MemberNo</code>)과 매장(<code>StoreNo</code>)를 잇는 예약 내역 테이블입니다.
+                예약 일자/시간/인원과 메모(<code>ResComment</code>)를 저장하고,
+                이후 리뷰 권한 검증 시 “해당 매장을 실제로 예약한 이력”이 있는지 확인하는 근거로 사용합니다.
+            </li>
+            <li>
+                <code>Review</code> – 리뷰는 <code>MemberNo</code>, <code>StoreNo</code>, <code>ResNo</code>를 모두 가지고 있어
+                “어떤 회원이, 어떤 매장을, 어떤 예약에 대해 남긴 리뷰인지”까지 추적할 수 있도록 설계했습니다.
+                이 구조 덕분에 <b>예약이 존재하지 않으면 리뷰를 작성할 수 없도록</b> 서비스 로직에서 쉽게 검증할 수 있습니다.
+            </li>
+            <li>
+                <code>WishList</code> – 회원과 매장 사이의 즐겨찾기 관계를 따로 분리해 저장해,
+                추후 추천/랭킹 기능이나 개인화 홈 화면으로 확장할 수 있도록 여지를 남겼습니다.
+            </li>
+            <li>
+                <code>AutoLogin</code> – 자동 로그인 토큰과 만료일을 회원 테이블과 분리해 관리하는 전용 테이블로 두어,
+                토큰 폐기·재발급을 회원 정보 변경과 독립적으로 처리할 수 있게 했습니다.
+            </li>
+            <li>
+                <code>Advertisement</code> – 배너/홍보용 광고 정보를 별도 테이블로 분리해
+                추후 매장 단위 멤버십과 조합해 노출 정책을 바꾸기 쉽도록 확장성을 고려했습니다.
+            </li>
+        </ul>
+        <p>
+            이런 구조 덕분에 “예약 기반 리뷰”라는 핵심 규칙을 DB 차원에서 강제하면서도,
+            즐겨찾기, 멤버십, 자동 로그인 등 부가 기능을 독립적인 테이블로 설계해
+            이후 기능 추가·수정에 유연하게 대응할 수 있도록 구성했습니다.
+        </p>
+    </section>
+
+
+    <!-- 9. 모달 -->
+    <div class="modal-backdrop" id="hpModalBackdrop" style="display:none;">
+        <div class="modal-content">
+            <button class="modal-close" id="hpModalClose">닫기</button>
+            <img id="hpModalImg" src="" alt="screenshot preview" />
+            <div class="modal-caption" id="hpModalCaption"></div>
+        </div>
     </div>
-  </div>
 </section>

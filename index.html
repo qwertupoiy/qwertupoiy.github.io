@@ -1,178 +1,183 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YooDohyun Portfolio</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=11" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YooDohyun Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=11" />
 </head>
 <body>
-  <!-- 사이드바 -->
-  <nav class="sidebar">
+<!-- 사이드바 -->
+<nav class="sidebar">
     <div class="sidebar-header">
-      <a href="index.html" class="sidebar-title">Portfolio</a>
+        <a href="index.html" class="sidebar-title">Portfolio</a>
     </div>
     <ul class="sidebar-menu">
-      <li class="sidebar-label">Projects</li>
-      <li><a href="pages/projects/honestpick.html" data-page="pages/projects/honestpick.html">HonestPick</a></li>
-      <li><a href="pages/projects/summarix.html" data-page="pages/projects/summarix.html">Summarix</a></li>
+        <li class="sidebar-label">Projects</li>
+        <li><a href="pages/projects/honestpick.html" data-page="pages/projects/honestpick.html">HonestPick</a></li>
+        <li><a href="pages/projects/summarix.html" data-page="pages/projects/summarix.html">Summarix</a></li>
     </ul>
     <div class="sidebar-footer">
-      <button class="theme-toggle" title="테마">◑</button>
-      <p>© 2025 qwertupoiy</p>
+        <button class="theme-toggle" title="테마">◑</button>
+        <p>© 2025 qwertupoiy</p>
     </div>
-  </nav>
+</nav>
 
-  <!-- 메인 -->
-  <main class="content">
+<!-- 메인 -->
+<main class="content">
     <!-- 모바일 헤더 -->
     <header class="mobile-header">
-      <button class="menu-btn">☰</button>
-      <h2>Portfolio</h2>
+        <button class="menu-btn">☰</button>
+        <h2>Portfolio</h2>
     </header>
 
     <section class="main-wrapper">
-      <!-- 상단 프로필 -->
-      <section class="card profile-card">
-        <div class="profile-left">
-          <div class="profile-avatar">
-            <img src="assets/img/profile.jpg" alt="Profile" />
-          </div>
-          <div>
-            <h1>안녕하세요, 개발자 유도현입니다 👋</h1>
-            <p>
-              JSP 기반 웹 개발로 시작해서 Spring, FastAPI로 확장해온 백엔드 지향 개발자입니다.<br />
-              단순 CRUD를 넘어서 <b>데이터를 수집·저장·활용하는 흐름</b>을 만드는 데 관심이 많고,<br />
-              현재는 <b>데이터 엔지니어</b> 포지션을 목표로 파이프라인과 분석 파트를 함께 공부하고 있습니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 가운데 2열 -->
-      <section class="middle-grid">
-        <!-- 왼쪽 열 -->
-        <div class="col col-left">
-          <!-- Projects -->
-          <section class="card projects-card">
-            <h3 class="section-title">Projects</h3>
-            <ul class="project-links">
-              <li>
-                <a href="pages/projects/honestpick.html">
-                  <span class="project-title">HonestPick</span>
-                  <span class="project-meta">음식점 리뷰 및 예약 웹사이트</span>
-                  <span class="project-date">2025.05 ~ 2025.06</span>
-                </a>
-              </li>
-              <li>
-                <a href="pages/projects/summarix.html">
-                  <span class="project-title">Summarix</span>
-                  <span class="project-meta">AI 기반 경제 뉴스 분석 웹서비스</span>
-                  <span class="project-date">2025.09 ~ 2025.10</span>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <!-- Certificates (아래 카드) -->
-          <section class="card certificates-card">
-            <h3 class="section-title">Certificates</h3>
-            <ul class="cert-list">
-              <li class="cert-item">
-                <div class="cert-name">SQL개발자(SQLD자격)</div>
-                <div class="cert-meta">
-                  <span class="cert-org">한국데이터베이스진흥센터</span>
-                  <span class="cert-date">취득: 2025-04</span>
+        <!-- 상단 프로필 -->
+        <section class="card profile-card">
+            <div class="profile-left">
+                <div class="profile-avatar">
+                    <img src="assets/img/profile.jpg" alt="Profile" />
                 </div>
-              </li>
-              <li class="cert-item">
-                <div class="cert-name">데이터분석준전문가(ADsP)</div>
-                <div class="cert-meta">
-                  <span class="cert-org">한국데이터베이스진흥센터</span>
-                  <span class="cert-date">취득: 2025-06</span>
+                <div>
+                    <h1>안녕하세요, 개발자 유도현입니다 👋</h1>
+                    <p>
+                        백엔드와 데이터 파이프라인을 함께 다루는 개발자 유도현입니다.<br />
+                        JSP 기반 웹 개발로 시작해 Spring Boot와 FastAPI로 REST API 서버를 구현해 왔고,<br />
+                        서비스에서 발생하는 로그·데이터를 <b>수집 → 가공 → 저장 → 조회</b>하는 흐름을 설계하는 데 관심이 많습니다.<br />
+                        MySQL과 MongoDB를 활용한 데이터 모델링과 Python 기반의 간단한 ETL·배치 코드를 작성하며<br />
+                        <b>데이터 엔지니어링 역량</b>을 꾸준히 쌓고 있습니다.
+                    </p>
                 </div>
-              </li>
-              <li class="cert-item">
-                <div class="cert-name">2종보통운전면허</div>
-                <div class="cert-meta">
-                  <span class="cert-org">경찰청(운전면허시험관리단)</span>
-                  <span class="cert-date">취득: 2017-12</span>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </div>
+            </div>
+        </section>
 
-        <!-- 오른쪽 열 -->
-        <div class="col col-right">
-          <!-- Skill Stack -->
-          <section class="card skills-card">
-            <h3 class="section-title">Skill Stack</h3>
+        <!-- 가운데 2열 -->
+        <section class="middle-grid">
+            <!-- 왼쪽 열 -->
+            <div class="col col-left">
+                <!-- Projects -->
+                <section class="card projects-card">
+                    <h3 class="section-title">Projects</h3>
+                    <ul class="project-links">
+                        <li>
+                            <a href="pages/projects/honestpick.html">
+                                <span class="project-title">HonestPick</span>
+                                <span class="project-meta">음식점 리뷰 &amp; 예약 웹서비스</span>
+                                <span class="project-desc">HonestPick은 실제 방문 이력이 있는 사용자만 리뷰를 작성할 수 있도록 ‘예약 기반 인증’을 적용한 음식점 리뷰 플랫폼입니다.</span>
+                                <span class="project-date">2025.05 ~ 2025.06</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/projects/summarix.html">
+                                <span class="project-title">Summarix</span>
+                                <span class="project-meta">AI 기반 경제 뉴스 요약·분석 웹서비스</span>
+                                <span class="project-desc">경제 뉴스 데이터를 수집, 정제, 가공하여 하나의 구조화된 데이터셋으로 통합하는 프로젝트입니다. </span>
+                                <span class="project-date">2025.09 ~ 2025.10</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
 
-            <div class="skills-category">
-              <h4>Backend</h4>
-              <div class="skills-list">
-                <span class="skill-btn"><i class="devicon-java-plain colored"></i>Java</span>
-                <span class="skill-btn"><i class="devicon-spring-plain colored"></i>Spring Boot</span>
-                <span class="skill-btn"><i class="devicon-html5-plain colored"></i>JSP / Servlet</span>
-                <span class="skill-btn"><i class="devicon-nodejs-plain colored"></i>REST API</span>
-              </div>
+                <!-- Certificates (아래 카드) -->
+                <section class="card certificates-card">
+                    <h3 class="section-title">Certificates</h3>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <div class="cert-name">SQL개발자(SQLD)</div>
+                            <div class="cert-meta">
+                                <span class="cert-org">한국데이터산업진흥원</span>
+                                <span class="cert-date">취득: 2025.04</span>
+                            </div>
+                        </li>
+                        <li class="cert-item">
+                            <div class="cert-name">데이터분석준전문가(ADsP)</div>
+                            <div class="cert-meta">
+                                <span class="cert-org">한국데이터산업진흥원</span>
+                                <span class="cert-date">취득: 2025.06</span>
+                            </div>
+                        </li>
+                        <li class="cert-item">
+                            <div class="cert-name">2종보통운전면허</div>
+                            <div class="cert-meta">
+                                <span class="cert-org">경찰청(운전면허시험관리단)</span>
+                                <span class="cert-date">취득: 2017.12</span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </div>
 
-            <div class="skills-category">
-              <h4>Database</h4>
-              <div class="skills-list">
-                <span class="skill-btn"><i class="devicon-mysql-plain colored"></i>MySQL</span>
-                <span class="skill-btn"><i class="devicon-oracle-original colored"></i>Oracle</span>
-                <span class="skill-btn"><i class="devicon-mongodb-plain colored"></i>MongoDB</span>
-                <span class="skill-btn"><i class="devicon-dbeaver-plain colored"></i>ERD 설계</span>
-              </div>
-            </div>
+            <!-- 오른쪽 열 -->
+            <div class="col col-right">
+                <!-- Skill Stack -->
+                <section class="card skills-card">
+                    <h3 class="section-title">Skill Stack</h3>
+                    <p class="skills-note">※ 굵게 표기된 기술은 주로 사용해 온 주력 스택입니다.</p>
 
-            <div class="skills-category">
-              <h4>Data / AI</h4>
-              <div class="skills-list">
-                <span class="skill-btn"><i class="devicon-python-plain colored"></i>Python</span>
-                <span class="skill-btn"><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
-                <span class="skill-btn"><i class="devicon-jupyter-plain colored"></i>Jupyter</span>
-                <span class="skill-btn"><i class="devicon-pandas-plain colored"></i>Pandas</span>
-                <span class="skill-btn"><i class="devicon-numpy-plain colored"></i>Numpy</span>
-              </div>
-            </div>
+                    <div class="skills-category">
+                        <h4>Backend</h4>
+                        <div class="skills-list">
+                            <span class="skill-btn"><i class="devicon-java-plain colored"></i><strong>Java</strong></span>
+                            <span class="skill-btn"><i class="devicon-spring-plain colored"></i><strong>Spring Boot</strong></span>
+                            <span class="skill-btn"><i class="devicon-nodejs-plain colored"></i><strong>REST API</strong></span>
+                            <span class="skill-btn"><i class="devicon-html5-plain colored"></i><strong>JSP / Servlet</strong></span>
+                        </div>
+                    </div>
 
-            <div class="skills-category">
-              <h4>Tools</h4>
-              <div class="skills-list">
-                <span class="skill-btn"><i class="devicon-intellij-plain colored"></i>IntelliJ</span>
-                <span class="skill-btn"><i class="devicon-eclipse-plain colored"></i>Eclipse</span>
-                <span class="skill-btn"><i class="devicon-vscode-plain colored"></i>VSCode</span>
-                <span class="skill-btn"><i class="devicon-docker-plain colored"></i>Docker</span>
-                <span class="skill-btn"><i class="devicon-github-original colored"></i>GitHub</span>
-              </div>
-            </div>
-          </section>
+                    <div class="skills-category">
+                        <h4>Database</h4>
+                        <div class="skills-list">
+                            <span class="skill-btn"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+                            <span class="skill-btn"><i class="devicon-oracle-original colored"></i><strong>Oracle</strong></span>
+                            <span class="skill-btn"><i class="devicon-mongodb-plain colored"></i><strong>MongoDB</strong></span>
+                            <span class="skill-btn"><i class="devicon-dbeaver-plain colored"></i>ERD 설계</span>
+                        </div>
+                    </div>
 
-          <!-- Contact (아래 카드) -->
-          <section class="card contact-card">
-            <h3 class="section-title">Contact</h3>
-            <ul>
-              <li><i class="devicon-github-original colored"></i>
-                <a href="https://github.com/qwertupoiy" target="_blank">GitHub 링크</a>
-              </li>
-              <li>📧
-                <a href="mailto:qwertupoiy@gmail.com">qwertupoiy@gmail.com</a>
-              </li>
-              <li>📄
-                <a href="assets/docs/resume.pdf" download>이력서 PDF 다운로드</a>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </section>
+                    <div class="skills-category">
+                        <h4>Data / AI</h4>
+                        <div class="skills-list">
+                            <span class="skill-btn"><i class="devicon-python-plain colored"></i>Python</span>
+                            <span class="skill-btn"><i class="devicon-fastapi-plain colored"></i><strong>FastAPI</strong></span>
+                            <span class="skill-btn"><i class="devicon-jupyter-plain colored"></i><strong>Jupyter</strong></span>
+                            <span class="skill-btn"><i class="devicon-pandas-plain colored"></i>Pandas</span>
+                            <span class="skill-btn"><i class="devicon-numpy-plain colored"></i>Numpy</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h4>Tools</h4>
+                        <div class="skills-list">
+                            <span class="skill-btn"><i class="devicon-intellij-plain colored"></i>IntelliJ</span>
+                            <span class="skill-btn"><i class="devicon-eclipse-plain colored"></i>Eclipse</span>
+                            <span class="skill-btn"><i class="devicon-vscode-plain colored"></i>VSCode</span>
+                            <span class="skill-btn"><i class="devicon-docker-plain colored"></i>Docker</span>
+                            <span class="skill-btn"><i class="devicon-github-original colored"></i>GitHub</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact (아래 카드) -->
+                <section class="card contact-card">
+                    <h3 class="section-title">Contact</h3>
+                    <ul>
+                        <li><i class="devicon-github-original colored"></i>
+                            <a href="https://github.com/qwertupoiy" target="_blank">GitHub · qwertupoiy</a>
+                        </li>
+                        <li>📧
+                            <a href="mailto:qwertupoiy@gmail.com">qwertupoiy@gmail.com</a>
+                        </li>
+                        <li>📄
+                            <a href="assets/docs/resume.pdf" download>이력서 PDF 다운로드</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
     </section>
-  </main>
+</main>
 
-  <script src="assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
