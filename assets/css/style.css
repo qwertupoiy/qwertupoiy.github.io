@@ -58,6 +58,7 @@ body {
   padding: 0 5px;
 }
 
+/* 전체 링크 공통 */
 .sidebar-menu a {
   display: block;
   padding: 8px 12px;
@@ -69,6 +70,33 @@ body {
 
 .sidebar-menu a:hover {
   background: #f0f0f0;
+}
+
+/* 프로젝트 전용: 1줄 = 이름+날짜, 2줄 = 설명 */
+.sidebar-project {
+  display: block;
+}
+
+.sidebar-project-top {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.sidebar-project-name {
+  font-size: 0.95rem;
+}
+
+.sidebar-project-date {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.sidebar-project-desc {
+  display: block;
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin-top: 2px;
 }
 
 .sidebar-footer {
