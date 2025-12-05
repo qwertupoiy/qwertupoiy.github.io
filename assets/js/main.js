@@ -115,3 +115,47 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+// ------------------------------
+// 테마 토글 (라이트 / 다크)
+// ------------------------------
+(() => {
+  const btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+
+  const STORAGE_KEY = "theme";
+  const root = document.documentElement;
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      root.classList.add("dark");
+      btn.textContent = "☼"; // 다크일 때는 "라이트로 전환" 느낌
+      btn.setAttribute("aria-label", "라이트 모드로 전환");
+    } else {
+      root.classList.remove("dark");
+      btn.textContent = "◑"; // 라이트일 때는 "다크로 전환" 느낌
+      btn.setAttribute("aria-label", "다크 모드로 전환");
+    }
+  }
+
+  // 1) localStorage에 저장된 테마 우선
+  let saved = localStorage.getItem(STORAGE_KEY);
+
+  // 2) 없으면 시스템 설정 따라감
+  if (!saved) {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    saved = prefersDark ? "dark" : "light";
+  }
+
+  applyTheme(saved);
+
+  // 클릭 시 토글
+  btn.addEventListener("click", () => {
+    const isDark = root.classList.contains("dark");
+    const next = isDark ? "light" : "dark";
+    localStorage.setItem(STORAGE_KEY, next);
+    applyTheme(next);
+  });
+})();

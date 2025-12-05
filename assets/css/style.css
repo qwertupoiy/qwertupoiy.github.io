@@ -410,3 +410,192 @@ body {
     flex: 0;
   }
 }
+
+/* ------------------------------
+   다크 모드
+------------------------------ */
+
+html.dark body {
+  background: #020617;  /* 아주 진한 네이비 계열 */
+  color: #e5e7eb;       /* 기본 텍스트 색 */
+}
+
+/* 사이드바 */
+html.dark .sidebar {
+  background: #020617;
+  border-right: 1px solid #1f2937;
+  color: #e5e7eb;
+}
+
+html.dark .sidebar-title {
+  color: #f9fafb;
+}
+
+html.dark .sidebar-menu a {
+  color: #e5e7eb;
+}
+
+html.dark .sidebar-menu a:hover {
+  background: #111827;
+}
+
+html.dark .sidebar-label {
+  color: #6b7280;
+}
+
+html.dark .sidebar-footer {
+  color: #9ca3af;
+}
+
+html.dark .theme-toggle {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+/* 카드 공통 */
+html.dark .card {
+  background: #020617;
+  border: 1px solid #111827;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  color: #e5e7eb;   /* 카드 안 텍스트 기본 색 */
+}
+
+/* 섹션 제목 / 메인 제목 */
+html.dark .section-title,
+html.dark .profile-left h1,
+html.dark .proj-honestpick .proj-section h2,
+html.dark .proj-summarix .proj-section h2 {
+  color: #f9fafb;
+}
+
+/* 메인 프로필 텍스트 */
+html.dark .profile-left p {
+  color: #e5e7eb;
+}
+
+/* ------------------------------
+   Projects / Certificates / Skills
+------------------------------ */
+
+/* 프로젝트 카드 배경 + 텍스트 */
+html.dark .project-links a {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* 프로젝트 이름 (HonestPick / Summarix) */
+html.dark .project-title {
+  color: #f9fafb;
+}
+
+/* 서브 텍스트 색 */
+html.dark .project-meta,
+html.dark .project-date,
+html.dark .cert-meta,
+html.dark .skills-note,
+html.dark .caption,
+html.dark .proj-meta {
+  color: #9ca3af;
+}
+
+/* 자격증 카드 배경 + 이름 */
+html.dark .cert-item {
+  background: #020617;
+}
+
+html.dark .cert-name {
+  color: #e5e7eb;
+}
+
+/* 스킬 카드 배경 */
+html.dark .skills-category,
+html.dark .screen-box,
+html.dark .proj-honestpick .arch-card,
+html.dark .proj-honestpick .screen-box.is-image,
+html.dark .proj-summarix .arch-card,
+html.dark .proj-summarix .screen-box.is-image {
+  background: #020617;
+}
+
+/* 스킬 아이콘 살짝 밝게 */
+html.dark .skills-card i[class^="devicon-"],
+html.dark .skills-card i[class*=" devicon-"],
+html.dark .contact-card i[class^="devicon-"],
+html.dark .contact-card i[class*=" devicon-"] {
+  filter: brightness(1.35);
+}
+
+/* 특히 GitHub 아이콘은 거의 검정이라 흰색으로 강제 */
+html.dark .devicon-github-original,
+html.dark .devicon-github-original-wordmark {
+  color: #f9fafb;
+}
+
+/* 스킬 버튼 */
+html.dark .skill-btn {
+  background: #020617;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+html.dark .skill-btn:hover {
+  background: #111827;
+  border-color: #9ca3af;
+}
+
+/* 스택 배지 (주요 모듈) */
+html.dark .stack {
+  background: #020617;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+/* 프로젝트 상세 기술 스택 라벨 (Language / Web / DB ...) */
+html.dark .proj-honestpick .proj-info li strong,
+html.dark .proj-summarix .proj-info li strong {
+  color: #e5e7eb;
+}
+
+/* Contact 영역 링크 */
+html.dark .contact-card a {
+  color: #e5e7eb;
+}
+
+/* ------------------------------
+   프로젝트 HERO 버튼 (GitHub 보기 등)
+------------------------------ */
+
+/* 메인/서브/깃허브 버튼 */
+html.dark .proj-honestpick .proj-hero-actions .btn-secondary,
+html.dark .proj-summarix .proj-hero-actions .btn-secondary {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #e5e7eb;
+}
+
+html.dark .proj-honestpick .proj-hero-actions .btn-primary,
+html.dark .proj-summarix .proj-hero-actions .btn-primary {
+  background: #f9fafb;      /* 다크 모드에서는 밝은 버튼 */
+  color: #111827;
+}
+
+/* 시연 영상 / 발표자료는 원래 색 유지 + 살짝 테두리 */
+html.dark .proj-honestpick .proj-hero-actions .btn-demo,
+html.dark .proj-honestpick .proj-hero-actions .btn-ppt,
+html.dark .proj-summarix .proj-hero-actions .btn-demo,
+html.dark .proj-summarix .proj-hero-actions .btn-ppt {
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.6);
+}
+
+/* ------------------------------
+   모달
+------------------------------ */
+
+html.dark .modal-content {
+  background: #020617;
+}
+
+html.dark .modal-caption {
+  color: #9ca3af;
+}
