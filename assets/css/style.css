@@ -155,17 +155,19 @@ body {
   flex-wrap: wrap;
 }
 
+/* ✅ 프로필 사진: 원형 → 3:4 직사각형 (이력서 사진 느낌) */
 .profile-avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 999px;
+  width: 96px;          /* 3 */
+  height: 128px;        /* 4 */
+  border-radius: 12px;  /* 너무 각지지 않게 살짝 라운드 */
   background: #eaeaea;
   overflow: hidden;
+  flex: 0 0 auto;
 }
 
 .profile-avatar img {
-  width: 70px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
