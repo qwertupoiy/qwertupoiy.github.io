@@ -1,206 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YooDohyun Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=11" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home</title>
+    <style>
+        :root{
+          --bg:#ffffff;
+          --text:#111827;
+          --muted:#6b7280;
+          --border:#e5e7eb;
+          --radius:12px;
+        }
+        *{box-sizing:border-box;}
+        body{
+          margin:0;
+          font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+          background:var(--bg);
+          color:var(--text);
+        }
+        .wrap{
+          max-width:860px;
+          margin:0 auto;
+          padding:44px 16px 64px;
+        }
+        h1{
+          margin:0 0 10px;
+          font-size:28px;
+          letter-spacing:-0.02em;
+          font-weight:700;
+        }
+        p{
+          margin:0;
+          color:var(--muted);
+          line-height:1.7;
+        }
+        .grid{
+          display:grid;
+          grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+          gap:12px;
+          margin-top:22px;
+        }
+        a.card{
+          display:block;
+          padding:16px;
+          border:1px solid var(--border);
+          border-radius:var(--radius);
+          text-decoration:none;
+          color:inherit;
+          background:#fff;
+          transition:background 120ms ease,border-color 120ms ease;
+        }
+        a.card:hover{
+          background:#fafafa;
+          border-color:#d1d5db;
+        }
+        .title{
+          font-size:16px;
+          font-weight:700;
+        }
+        .desc{
+          margin-top:8px;
+          font-size:14px;
+          color:var(--muted);
+          line-height:1.55;
+        }
+        footer{
+          margin-top:18px;
+          padding-top:16px;
+          border-top:1px solid var(--border);
+          color:var(--muted);
+          font-size:12px;
+        }
+    </style>
 </head>
 <body>
-<!-- 사이드바 -->
-<nav class="sidebar">
-    <div class="sidebar-header">
-        <a href="index.html" class="sidebar-title">Portfolio</a>
-    </div>
-    <ul class="sidebar-menu">
-        <li class="sidebar-label">Projects</li>
+<main class="wrap">
+    <h1>Home</h1>
+    <p>포트폴리오 및 프로젝트 바로가기</p>
 
-        <li>
-            <a href="pages/projects/summarix.html"
-               data-page="pages/projects/summarix.html"
-               class="sidebar-project">
-                <span class="sidebar-project-top">
-                  <span class="sidebar-project-name">Summarix</span>
-                  <span class="sidebar-project-date">25.09 ~ 25.10</span>
-                </span>
-                <span class="sidebar-project-desc">경제뉴스 요약 플랫폼</span>
-            </a>
-        </li>
+    <section class="grid" aria-label="Links">
+        <a class="card" href="/portfolio/">
+            <div class="title">Portfolio</div>
+            <div class="desc">메인 포트폴리오 페이지</div>
+        </a>
 
-        <li>
-            <a href="pages/projects/honestpick.html"
-               data-page="pages/projects/honestpick.html"
-               class="sidebar-project">
-                <span class="sidebar-project-top">
-                  <span class="sidebar-project-name">HonestPick</span>
-                  <span class="sidebar-project-date">25.05 ~ 25.06</span>
-                </span>
-                <span class="sidebar-project-desc">음식점 예약/리뷰 플랫폼</span>
-            </a>
-        </li>
+        <a class="card" href="https://github.com/qwertupoiy/Summarix">
+            <div class="title">Summarix</div>
+            <div class="desc">AI 기반 경제 뉴스 요약·분석</div>
+        </a>
 
-    </ul>
-    <div class="sidebar-footer">
-        <button class="theme-toggle" title="테마">◑</button>
-        <p>© 2025 qwertupoiy</p>
-    </div>
-</nav>
-
-<!-- 메인 -->
-<main class="content">
-    <!-- 모바일 헤더 -->
-    <header class="mobile-header">
-        <button class="menu-btn">☰</button>
-        <h2>Portfolio</h2>
-    </header>
-
-    <section class="main-wrapper">
-        <!-- 상단 프로필 -->
-        <section class="card profile-card">
-            <div class="profile-left">
-                <div class="profile-avatar">
-                    <img src="assets/img/profile.png" alt="Profile" />
-                </div>
-                <div>
-                    <h1>안녕하세요, 개발자 유도현입니다 👋</h1>
-                    <p>
-                        백엔드와 데이터 파이프라인을 함께 다루는 개발자 유도현입니다.<br />
-                        JSP 기반 웹 개발로 시작해 Spring Boot와 FastAPI로 REST API 서버를 구현해 왔고,<br />
-                        서비스에서 발생하는 로그·데이터를 <b>수집 → 가공 → 저장 → 조회</b>하는 흐름을 설계하는 데 관심이 많습니다.<br />
-                        MySQL과 MongoDB를 활용한 데이터 모델링과 Python 기반의 간단한 ETL·배치 코드를 작성하며<br />
-                        <b>데이터 엔지니어링 역량</b>을 꾸준히 쌓고 있습니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 가운데 2열 -->
-        <section class="middle-grid">
-            <!-- 왼쪽 열 -->
-            <div class="col col-left">
-                <!-- Projects -->
-                <section class="card projects-card">
-                    <h3 class="section-title">Projects</h3>
-                    <ul class="project-links">
-                        <li>
-                            <a href="pages/projects/summarix.html">
-                                <span class="project-title">Summarix</span>
-                                <span class="project-meta">AI 기반 경제 뉴스 요약·분석 웹서비스</span>
-                                <span class="project-desc">경제 뉴스 데이터를 수집, 정제, 가공하여 하나의 구조화된 데이터셋으로 통합하는 프로젝트입니다. </span>
-                                <span class="project-date">2025.09 ~ 2025.10</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/projects/honestpick.html">
-                                <span class="project-title">HonestPick</span>
-                                <span class="project-meta">음식점 리뷰 &amp; 예약 웹서비스</span>
-                                <span class="project-desc">HonestPick은 실제 방문 이력이 있는 사용자만 리뷰를 작성할 수 있도록 ‘예약 기반 인증’을 적용한 음식점 리뷰 플랫폼입니다.</span>
-                                <span class="project-date">2025.05 ~ 2025.06</span>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- Certificates (아래 카드) -->
-                <section class="card certificates-card">
-                    <h3 class="section-title">Certificates</h3>
-                    <ul class="cert-list">
-                        <li class="cert-item">
-                            <div class="cert-name">SQL개발자(SQLD)</div>
-                            <div class="cert-meta">
-                                <span class="cert-org">한국데이터산업진흥원</span>
-                                <span class="cert-date">취득: 2025.04</span>
-                            </div>
-                        </li>
-                        <li class="cert-item">
-                            <div class="cert-name">데이터분석준전문가(ADsP)</div>
-                            <div class="cert-meta">
-                                <span class="cert-org">한국데이터산업진흥원</span>
-                                <span class="cert-date">취득: 2025.06</span>
-                            </div>
-                        </li>
-                        <li class="cert-item">
-                            <div class="cert-name">2종보통운전면허</div>
-                            <div class="cert-meta">
-                                <span class="cert-org">경찰청(운전면허시험관리단)</span>
-                                <span class="cert-date">취득: 2017.12</span>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-
-            <!-- 오른쪽 열 -->
-            <div class="col col-right">
-                <!-- Skill Stack -->
-                <section class="card skills-card">
-                    <h3 class="section-title">Skill Stack</h3>
-                    <p class="skills-note">※ 굵게 표기된 기술은 주로 사용해 온 주력 스택입니다.</p>
-
-                    <div class="skills-category">
-                        <h4>Backend</h4>
-                        <div class="skills-list">
-                            <span class="skill-btn"><i class="devicon-java-plain colored"></i><strong>Java</strong></span>
-                            <span class="skill-btn"><i class="devicon-spring-plain colored"></i><strong>Spring Boot</strong></span>
-                            <span class="skill-btn"><i class="devicon-nodejs-plain colored"></i><strong>REST API</strong></span>
-                            <span class="skill-btn"><i class="devicon-html5-plain colored"></i><strong>JSP / Servlet</strong></span>
-                        </div>
-                    </div>
-
-                    <div class="skills-category">
-                        <h4>Database</h4>
-                        <div class="skills-list">
-                            <span class="skill-btn"><i class="devicon-mysql-plain colored"></i>MySQL</span>
-                            <span class="skill-btn"><i class="devicon-oracle-original colored"></i><strong>Oracle</strong></span>
-                            <span class="skill-btn"><i class="devicon-mongodb-plain colored"></i><strong>MongoDB</strong></span>
-                            <span class="skill-btn"><i class="devicon-dbeaver-plain colored"></i>ERD 설계</span>
-                        </div>
-                    </div>
-
-                    <div class="skills-category">
-                        <h4>Data / AI</h4>
-                        <div class="skills-list">
-                            <span class="skill-btn"><i class="devicon-python-plain colored"></i><strong>Python</strong></span>
-                            <span class="skill-btn"><i class="devicon-fastapi-plain colored"></i><strong>FastAPI</strong></span>
-                            <span class="skill-btn"><i class="devicon-jupyter-plain colored"></i><strong>Jupyter</strong></span>
-                            <span class="skill-btn"><i class="devicon-pandas-plain colored"></i>Pandas</span>
-                            <span class="skill-btn"><i class="devicon-numpy-plain colored"></i>Numpy</span>
-                        </div>
-                    </div>
-
-                    <div class="skills-category">
-                        <h4>Tools</h4>
-                        <div class="skills-list">
-                            <span class="skill-btn"><i class="devicon-intellij-plain colored"></i><strong>IntelliJ</strong></span>
-                            <span class="skill-btn"><i class="devicon-eclipse-plain colored"></i><strong>Eclipse</strong></span>
-                            <span class="skill-btn"><i class="devicon-vscode-plain colored"></i>VSCode</span>
-                            <span class="skill-btn"><i class="devicon-docker-plain colored"></i>Docker</span>
-                            <span class="skill-btn"><i class="devicon-github-original colored"></i><strong>GitHub</strong></span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Contact (아래 카드) -->
-                <section class="card contact-card">
-                    <h3 class="section-title">Contact</h3>
-                    <ul>
-                        <li><i class="devicon-github-original colored"></i>
-                            <a href="https://github.com/qwertupoiy" target="_blank">GitHub · qwertupoiy</a>
-                        </li>
-                        <li>📧
-                            <a href="mailto:qwertupoiy@gmail.com">qwertupoiy@gmail.com</a>
-                        </li>
-                        <li>📄
-                            <a href="assets/docs/유도현_이력서입니다.pdf" download>이력서 PDF 다운로드</a>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-        </section>
+        <a class="card" href="https://github.com/qwertupoiy/HonestPick">
+            <div class="title">HonestPick</div>
+            <div class="desc">예약·방문 이력 기반 리뷰·예약</div>
+        </a>
     </section>
-</main>
 
-<script src="assets/js/main.js"></script>
+    <footer>
+        © 2025 qwertupoiy
+    </footer>
+</main>
 </body>
 </html>
