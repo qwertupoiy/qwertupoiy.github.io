@@ -1,3 +1,9 @@
+# IntelliJ IDEA (전체 무시)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
 # 디폴트 무시된 파일
 /shelf/
 /workspace.xml
